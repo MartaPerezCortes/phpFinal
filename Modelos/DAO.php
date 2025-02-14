@@ -1,9 +1,9 @@
 <?php
     define('HOST', '127.0.0.1');
-    define('USER', 'root');
-    define('PASS', '');
-    define('DB', 'db24');
-
+    define('USER', 'admin');
+    define('PASS', 'Sanvalero24');
+    define('DB', 'php');
+    define('PORT', '3306');
     class DAO{
 		private $conexion; 
         private $error;
