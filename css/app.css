@@ -1,0 +1,492 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+body, * {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+}
+
+body{
+    height: auto;
+}
+#capaEncabezado {
+    background: linear-gradient(to right, rgb(207, 156, 255), rgb(237, 220, 253));
+    height: 10vw;
+}
+#contenedorArriba{
+width: 100%;
+}
+
+#containerlogo img {
+    width: 15vw;
+    height: 10vw;
+}
+
+#nombreTitulo {
+    font-size: 3vw;
+    color: rgb(92, 92, 92);
+    padding-top: 3%;
+    text-align: center;
+}
+
+#loginTitulo {
+    font-size: 1vw;
+    padding-top: 5%;
+    text-align: center;
+    padding-right: 0;
+}
+
+#capaMenu {
+    padding: 0;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+.form-label {
+    font-size: 0.9rem;
+}
+
+.form-check-label {
+    font-size: 0.85rem;
+}
+
+.container {
+    max-width: 40vw; 
+}
+
+#formularioEdicion, 
+#formularioLogin {
+    border-radius: 1vw;
+    background-color: white; /* Fondo blanco para resaltar */
+}
+#formularioEdicion, 
+#formularioLogin {
+    width: 70%; 
+    margin: auto;
+}
+
+#formularioEdicion button, 
+#formularioLogin button, #editMenuBtn, .form-section button,#botonesBuscar button {
+    background-color: #74b8eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1vw;
+    font-weight: bold;
+    width: auto;
+    border-radius: 5vw;
+    margin-bottom: 0.5vw;
+    margin: 1vw;
+    padding: 0.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+#formularioEdicion button:hover, 
+#formularioLogin button:hover, #editMenuBtn:hover, .form-section button:hover,#botonesBuscar button:hover {
+    background-color: rgb(207, 156, 255);
+}
+
+#formularioEdicion input, 
+#formularioEdicion select, 
+#formularioEdicion button, 
+#formularioLogin input, 
+#formularioLogin select, 
+#formularioLogin button, .form-section button, #botonesBuscar button {
+    transition: border-color 0.3s ease;
+    font-size: 1rem; 
+}
+
+#formularioEdicion input, 
+#formularioLogin input {
+    margin-bottom: 1vw;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#formularioEdicion input:focus, 
+#formularioEdicion select:focus, 
+#formularioEdicion button:focus,
+#formularioLogin input:focus, 
+#formularioLogin select:focus, 
+#formularioLogin button:focus, #editMenuBtn, .form-section button:focus {
+    border-bottom: 0.5px solid #74ebd5; 
+}
+#editMenuBtn{
+    margin-left: 2vw !important;
+}
+.navbar-nav{
+ margin-right: 0 !important;
+}
+.d-flex{
+    margin-left: auto;
+}
+
+#capaContenido{
+    margin-top: 1vw;
+}
+#capaContenido h2 {
+    text-align: center;
+}
+
+#loginTitulo img{
+    width: 1.5vw;
+    height: 1.5vw;
+}
+#botonesBuscar button:nth-child(1){
+    margin-left: 0;
+}
+#botonesBuscar button{
+    margin: 1vw;
+}
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: none;
+    margin-left: 5px;
+}
+#formularioBuscar .row:first-child{
+    margin-top: 2vw;
+}
+
+/* Contenedor del interruptor */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Slider del interruptor */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: grey;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: green;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+  .navbar button{
+    margin-bottom: 0vw;
+  }
+
+  /*MENU VERTICAL*/
+/* Contenedor principal del menú y formulario */
+.menu-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.menu-section {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    border-right: 1px solid #ccc;
+}
+
+.menu-vertical-container {
+    transition: transform 0.5s ease-in-out;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0; /* Elimina padding para manejar mejor las secciones */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Altura completa del contenedor */
+    overflow: hidden; /* Asegura que no haya scroll fuera del área de scroll específica */
+}
+
+
+/* Encabezado fijo */
+.menu-header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    color: rgb(207, 156, 255);
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+/* Contenedor scrollable */
+.menu-wrapper {
+    flex: 1; /* Toma el resto del espacio disponible */
+    overflow-y: auto; /* Habilitar scroll vertical */
+    padding: 2vw;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    scrollbar-width: thin; /* Scroll fino */
+    scrollbar-color: #74b8eb transparent; /* thumb (azul) y track sin fondo */
+}
+
+/* Personalización del scrollbar para navegadores WebKit */
+.menu-wrapper::-webkit-scrollbar {
+    width: 8px; /* Hacer la barra más delgada */
+    background: transparent; /* Fondo transparente */
+    border-radius: 12px; /* Bordes redondeados de la barra completa */
+}
+
+.menu-wrapper::-webkit-scrollbar-track {
+    background: transparent; /* Fondo del track transparente */
+    border-radius: 12px; /* Bordes redondeados para el track */
+}
+
+.menu-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #74b8eb, #569dd6); /* Gradiente azul para el thumb */
+    border-radius: 12px; /* Bordes redondeados para el thumb */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    border: 2px solid transparent; /* Espacio entre el thumb y el track */
+}
+
+.menu-wrapper::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #569dd6, #3a8cc5); /* Gradiente más oscuro al hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Incrementar la sombra en hover */
+}
+
+/* Para navegadores que no soporten ::-webkit-scrollbar */
+.menu-vertical-container {
+    scrollbar-width: thin; /* Barra delgada */
+    scrollbar-color: #74b8eb transparent; /* thumb (azul) y track sin fondo */
+}
+
+
+.form-section {
+    padding: 20px;
+    display: none; /* Oculto por defecto */
+   
+}
+
+/* Estilo del menú vertical */
+.menu-vertical {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item-actions img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.menu-add-above,
+.menu-add-below {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.menu-add-above img,
+.menu-add-below img, .menu-add-submenu img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s; /* Efecto al pasar el mouse */
+}
+
+/* Estilos para los elementos .menu-add-above y .menu-add-below dentro de un submenu */
+.submenu .menu-add-above,
+.submenu .menu-add-below,
+.menu-add-submenu {
+    display: flex;
+    justify-content: center; /* Centrar los botones horizontalmente */
+    align-items: center; /* Centrar los botones verticalmente */
+    margin: 5px 0;
+}
+.submenu .menu-add-above .puntitos,
+.submenu .menu-add-below .puntitos,
+.menu-add-submenu .puntitos {
+    display: none;
+}
+
+
+select {
+    transform-origin: top;
+    transform: rotateX(0deg);  /* Asegura que la rotación no afecte la dirección */
+}
+
+h2{
+    margin: 2vw;
+}
+
+/*************** ROLES ***************/
+#rol-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    gap: 1vw; /* Espaciado entre el select y los iconos */
+    margin-bottom: 1vw;
+    width: auto;
+}
+
+#rolFiltro {
+    padding: 0.5vw;
+    font-size: 1vw;
+    border-radius: 0.5vw;
+    border: 1px solid #ccc;
+
+}
+
+#rol-icon-container {
+    display: flex;
+    align-items: center; /* Asegura alineación con el select */
+    gap: 0.5vw;
+}
+
+#rol-icon-container img {
+    width: 2vw; /* Ajusta el tamaño */
+    height: 2vw;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+#rol-icon-container img:hover {
+    opacity: 0.7; /* Efecto de transparencia al pasar el cursor */
+}
+
+/* 🔹 Contenedor del formulario de roles (Debajo del Select) */
+#formularioRolContainer {
+    width: 30vw; /* Ajuste del tamaño */
+    background: white;
+    border: 0.1vw solid #ccc;
+    padding: 1vw;
+    border-radius: 1vw;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1vw;
+    display: none; /* Oculto por defecto */
+    text-align: center;
+    font-size: 1vw;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 🔹 Estilo de los labels */
+#formularioRolContainer label {
+    font-weight: bold;
+    font-size: 1vw;
+    display: block;
+    margin-bottom: 0.5vw;
+}
+
+/* 🔹 Estilos de los inputs */
+#formularioRolContainer input {
+    width: 90%;
+    padding: 0.5vw;
+    border: 0.1vw solid #ccc;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    margin-bottom: 1vw;
+    text-align: center;
+}
+
+/* 🔹 Botones dentro del formulario */
+#formularioRolContainer button {
+    width: 30%;
+    padding: 0.7vw;
+    border-radius: 5vw;
+    font-size: 1vw;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#guardarRol {
+    background-color: #74b8eb;
+    color: white;
+}
+
+#cancelarRol {
+    background-color: #d9534f;
+    color: white;
+}
+
+/* 🔹 Efecto Hover igual que el resto de los botones */
+#guardarRol:hover, 
+#formularioEdicion button:hover, 
+#formularioLogin button:hover, 
+#editMenuBtn:hover, 
+.form-section button:hover, 
+#botonesBuscar button:hover {
+    background-color: rgb(207, 156, 255);
+}
+
+/* Estilos uniformes para los botones */
+.custom-btn, #formularioLogin button {
+    background-color: #74b8eb; /* Azul igual al botón de login */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5vw;
+    margin-top: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+    text-align: center;
+}
+
+.custom-btn:hover, #formularioLogin button:hover {
+    background-color: rgb(207, 156, 255);
+}
+
+/* Ajuste especial para el botón de cerrar sesión */
+.custom-btn.btn-danger {
+    background-color: #d9534f; /* Rojo */
+}
+
+.custom-btn.btn-danger:hover {
+    background-color: #c9302c; /* Rojo más oscuro */
+}
