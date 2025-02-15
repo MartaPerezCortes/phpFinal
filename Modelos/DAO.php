@@ -1,5 +1,5 @@
 <?php
-    define('HOST', '127.0.0.1');
+    define('HOST', 'php.czznbbkadsom.us-east-1.rds.amazonaws.com');
     define('USER', 'admin');
     define('PASS', 'Sanvalero24');
     define('DB', 'php');
